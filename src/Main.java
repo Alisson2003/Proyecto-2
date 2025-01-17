@@ -7,8 +7,8 @@ public class Main {
         JFrame frame = new JFrame("Mi Login");
         frame.setContentPane(new Login().mainPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(800,600);
-        frame.setPreferredSize(new Dimension(800, 600));
+        frame.setSize(600,700);
+        frame.setPreferredSize(new Dimension(600, 700));
         frame.pack();
         frame.setVisible(true);
 
