@@ -38,6 +38,7 @@ public class Login {
                     JOptionPane.showMessageDialog(mainPanel, "¡Acceso concedido!", "Éxito", JOptionPane.INFORMATION_MESSAGE);
                     // Lógica para redirigir a otra ventana o funcionalidad
                 } else {
+
                     JOptionPane.showMessageDialog(mainPanel, "Usuario o contraseña incorrectos.", "Error", JOptionPane.ERROR_MESSAGE);
                 }
             }
