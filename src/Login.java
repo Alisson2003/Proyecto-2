@@ -46,21 +46,21 @@ public class Login {
         cancelarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                System.exit(0);
             }
         });
 
 
     }
 
-    public boolean validarUsuario(String usuario, String passwordField1) {
+    public boolean validarUsuario(String usuario, String password) {
         try {
             // Conectar a la base de datos
             MongoDatabase database = Conexion.getDatabase();
             MongoCollection<Document> collection = database.getCollection("Usuarios");
 
             // Crear la consulta
-            Document query = new Document("user", usuario).append("passwor", passwordField1);
+            Document query = new Document("user", usuario).append("passwor", password);
 
             // Verificar si existe un documento que cumpla con la consulta
             Document result = collection.find(query).first();

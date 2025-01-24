@@ -36,7 +36,7 @@ public class Conexion {
 
     private static final String host = "localhost";
     private static final String port = "27017";
-    private static final String nombre_database = "FitTrackHub";
+    private static final String nombre_database = "FitTrakHub";
 
     private static MongoClient mongoClient;
 
