@@ -28,8 +28,15 @@ public class loginSocio {
                 // Llama al método para validar usuario y contraseña
                 boolean validado = validarUsuario(usu, pass);
                 if (validado) {
-                    JOptionPane.showMessageDialog(socioLogin, "¡Acceso concedido!", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+                    //JOptionPane.showMessageDialog(socioLogin, "¡Acceso concedido!", "Éxito", JOptionPane.INFORMATION_MESSAGE);
                     // Lógica para redirigir a otra ventana o funcionalidad
+                    JFrame frame = new JFrame("");
+                    frame.setContentPane(new menuSocio().menuSocio);
+                    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    frame.setSize(800,700);
+                    frame.setPreferredSize(new Dimension(800, 700));
+                    frame.pack();
+                    frame.setVisible(true);
                 } else {
                     JOptionPane.showMessageDialog(socioLogin, "Usuario o contraseña incorrectos.", "Error", JOptionPane.ERROR_MESSAGE);
                 }

@@ -22,18 +22,31 @@ public class loginAdministrador {
                 String pass = new String(passwordField1.getPassword());
                 // Valida que los campos no estén vacíos
                 if (usu.isEmpty() || pass.isEmpty()) {
-                    JOptionPane.showMessageDialog(loginAdministrador, "Por favor, completa todos los campos.", "Advertencia", JOptionPane.WARNING_MESSAGE);
-                    return;
+                    //JOptionPane.showMessageDialog(loginAdministrador, "Por favor, completa todos los campos.", "Advertencia", JOptionPane.WARNING_MESSAGE);
+                    //return;
+                    JFrame frame = new JFrame(" ");
+                    frame.setContentPane(new menuAdmi().menuAdmi);
+                    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    frame.setSize(800,700);
+                    frame.setPreferredSize(new Dimension(800, 700));
+                    frame.pack();
+                    frame.setVisible(true);
                 }
                 // Llama al método para validar usuario y contraseña
                 boolean validado = validarUsuario(usu, pass);
                 if (validado) {
-                    JOptionPane.showMessageDialog(loginAdministrador, "¡Acceso concedido!", "Éxito", JOptionPane.INFORMATION_MESSAGE);
-                    // Lógica para redirigir a otra ventana o funcionalidad
+                    JFrame frame = new JFrame("Menu Administrador");
+                    frame.setContentPane(new menuAdmi().menuAdmi);
+                    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    frame.setSize(800,700);
+                    frame.setPreferredSize(new Dimension(800, 700));
+                    frame.pack();
+                    frame.setVisible(true);
                 } else {
                     JOptionPane.showMessageDialog(loginAdministrador, "Usuario o contraseña incorrectos.", "Error", JOptionPane.ERROR_MESSAGE);
                 }
             }
+
         });
         regresarButton.addActionListener(new ActionListener() {
             @Override

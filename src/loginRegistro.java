@@ -28,8 +28,13 @@ public class loginRegistro {
                 // Llama al método para validar usuario y contraseña
                 boolean validado = validarUsuario(usu, pass);
                 if (validado) {
-                    JOptionPane.showMessageDialog(registroLogin, "¡Acceso concedido!", "Éxito", JOptionPane.INFORMATION_MESSAGE);
-                    // Lógica para redirigir a otra ventana o funcionalidad
+                    JFrame frame = new JFrame("Mi Login");
+                    frame.setContentPane(new menuRegistro().menuRegistro);
+                    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    frame.setSize(800,700);
+                    frame.setPreferredSize(new Dimension(800, 700));
+                    frame.pack();
+                    frame.setVisible(true);
                 } else {
                     JOptionPane.showMessageDialog(registroLogin, "Usuario o contraseña incorrectos.", "Error", JOptionPane.ERROR_MESSAGE);
                 }
