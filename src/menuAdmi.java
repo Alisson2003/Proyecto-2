@@ -32,9 +32,8 @@ public class menuAdmi {
         regresarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                loginAdministrador login = new loginAdministrador();
                 JFrame frame = new JFrame("Mi Login");
-                frame.setContentPane(new loginAdministrador().loginAdministrador);
+                frame.setContentPane(new Acceso().accesoPanel);
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frame.setSize(800,700);
                 frame.setPreferredSize(new Dimension(800, 700));

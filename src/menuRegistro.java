@@ -40,7 +40,7 @@ public class menuRegistro {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFrame frame = new JFrame("Mi Login");
-                frame.setContentPane(new loginRegistro().registroLogin);
+                frame.setContentPane(new Acceso().accesoPanel);
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frame.setSize(800,700);
                 frame.setPreferredSize(new Dimension(800, 700));
@@ -48,5 +48,9 @@ public class menuRegistro {
                 frame.setVisible(true);
             }
         });
+    }
+
+    public void metodosCRUD(){
+
     }
 }

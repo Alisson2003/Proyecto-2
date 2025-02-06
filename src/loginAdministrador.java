@@ -67,7 +67,7 @@ public class loginAdministrador {
             MongoDatabase database = Conexion.getDatabase();
             MongoCollection<Document> collection = database.getCollection("usu_admi");
             // Crear la consulta
-            Document query = new Document("user", usuario).append("passwor", password);
+            Document query = new Document("nombre", usuario).append("password", password);
             // Verificar si existe un documento que cumpla con la consulta
             Document result = collection.find(query).first();
             // Si el resultado no es null, las credenciales son válidas
