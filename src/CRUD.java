@@ -5,11 +5,12 @@ import org.bson.types.ObjectId;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class CRUD {
-    private JPanel CRUD;
+    public JPanel CRUD;
     private JTextField textNombre;
     private JTextField textEmail;
     private JTextField textMembresia;
@@ -53,6 +54,18 @@ public class CRUD {
             @Override
             public void actionPerformed(ActionEvent e) {
                 eliminarSocio();
+            }
+        });
+        salirButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame frame = new JFrame("Mi Login");
+                frame.setContentPane(new Acceso().accesoPanel);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.setSize(800,700);
+                frame.setPreferredSize(new Dimension(800, 700));
+                frame.pack();
+                frame.setVisible(true);
             }
         });
     }
@@ -130,12 +143,4 @@ public class CRUD {
         cargarDatos();
     }
 
-    // Método principal para probar la GUI
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("Gestión de Socios");
-        frame.setContentPane(new CRUD().CRUD);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setVisible(true);
-    }
 }

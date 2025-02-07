@@ -29,7 +29,7 @@ public class loginRegistro {
                 boolean validado = validarUsuario(usu, pass);
                 if (validado) {
                     JFrame frame = new JFrame("Mi Login");
-                    frame.setContentPane(new menuRegistro().menuRegistro);
+                    frame.setContentPane(new CRUD().CRUD);
                     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                     frame.setSize(800,700);
                     frame.setPreferredSize(new Dimension(800, 700));
@@ -57,7 +57,7 @@ public class loginRegistro {
         try {
             // Conectar a la base de datos
             MongoDatabase database = Conexion.getDatabase();
-            MongoCollection<Document> collection = database.getCollection("usu_recepcionista");
+            MongoCollection<Document> collection = database.getCollection("usuarios");
             // Crear la consulta
             Document query = new Document("nombre", usuario).append("password", password);
             // Verificar si existe un documento que cumpla con la consulta
