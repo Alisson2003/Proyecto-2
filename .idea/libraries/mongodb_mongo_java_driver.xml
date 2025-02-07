@@ -5,6 +5,8 @@
       <root url="jar://$MAVEN_REPOSITORY$/org/mongodb/mongo-java-driver/3.10.2/mongo-java-driver-3.10.2.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ideaLibSources/mongo-java-driver-3.10.2-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

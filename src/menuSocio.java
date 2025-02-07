@@ -7,28 +7,36 @@ public class menuSocio {
     public JPanel menuSocio;
     private JButton estadoDeCuentaButton;
     private JButton horariosRutinaButton;
-    private JButton historialPagosButton;
+    private JButton PagosButton;
     private JButton regresarButton;
 
     public menuSocio() {
-        estadoDeCuentaButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
         horariosRutinaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                JFrame frame = new JFrame("Horarios Rutina");
+                frame.setContentPane(new Horarios().horarios);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.setSize(800,700);
+                frame.setPreferredSize(new Dimension(800, 700));
+                frame.pack();
+                frame.setVisible(true);
             }
         });
-        historialPagosButton.addActionListener(new ActionListener() {
+
+        PagosButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                JFrame frame = new JFrame("Reportes de Pagos");
+                frame.setContentPane(new Pagos().Pagos);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.setSize(800,700);
+                frame.setPreferredSize(new Dimension(800, 700));
+                frame.pack();
+                frame.setVisible(true);
             }
         });
+
         regresarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -39,6 +47,13 @@ public class menuSocio {
                 frame.setPreferredSize(new Dimension(800, 700));
                 frame.pack();
                 frame.setVisible(true);
+            }
+        });
+
+        horariosRutinaButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
             }
         });
     }

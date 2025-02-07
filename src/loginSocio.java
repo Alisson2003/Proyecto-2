@@ -59,7 +59,7 @@ public class loginSocio {
         try {
             // Conectar a la base de datos
             MongoDatabase database = Conexion.getDatabase();
-            MongoCollection<Document> collection = database.getCollection("usu_socio");
+            MongoCollection<Document> collection = database.getCollection("usu_socios");
             // Crear la consulta
             Document query = new Document("nombre", usuario).append("password", password);
             // Verificar si existe un documento que cumpla con la consulta
