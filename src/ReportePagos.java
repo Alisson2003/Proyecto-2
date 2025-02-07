@@ -15,7 +15,6 @@ public class ReportePagos {
         database = Conexion.getDatabase();
         MongoCollection<org.bson.Document> coleccionPagos = database.getCollection("pagos_gym");
 
-        // Generar reporte desde la base de datos
         StringBuilder reporte = new StringBuilder();
         FindIterable<org.bson.Document> pagos = coleccionPagos.find();
 
